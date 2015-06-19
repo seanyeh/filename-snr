@@ -42,7 +42,7 @@ def main():
     #                     help="Directory to search. Default: .")
     parser.add_argument("search", metavar="SEARCH", help="Search term")
     parser.add_argument("replace", metavar="REPLACE", help="Replace term")
-    parser.add_argument("-d", "--search-dir",
+    parser.add_argument("-d", "--dir",
                         default=".", nargs="?", metavar="SEARCH_DIR",
                         help="Directory to search. Default: .")
     parser.add_argument("--allow-hidden", action="store_true",
