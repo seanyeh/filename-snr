@@ -37,9 +37,6 @@ def snr(args, changed):
 
 def main():
     parser = argparse.ArgumentParser()
-    # parser.add_argument("search_dir", metavar="SEARCH_DIR",
-    #                     nargs="?", default=".",
-    #                     help="Directory to search. Default: .")
     parser.add_argument("search", metavar="SEARCH", help="Search term")
     parser.add_argument("replace", metavar="REPLACE", help="Replace term")
     parser.add_argument("-d", "--dir",
