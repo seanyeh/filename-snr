@@ -37,18 +37,19 @@ def snr(args, changed):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("search_dir", metavar="SEARCH_DIR",
-                        nargs="?", default=".",
+    # parser.add_argument("search_dir", metavar="SEARCH_DIR",
+    #                     nargs="?", default=".",
+    #                     help="Directory to search. Default: .")
+    parser.add_argument("search", metavar="SEARCH", help="Search term")
+    parser.add_argument("replace", metavar="REPLACE", help="Replace term")
+    parser.add_argument("-d", "--search-dir",
+                        default=".", nargs="?", metavar="SEARCH_DIR",
                         help="Directory to search. Default: .")
-    parser.add_argument("-s", "--search", required=True,
-                        metavar="SEARCH", help="Search term")
-    parser.add_argument("-r", "--replace", required=True,
-                        metavar="REPLACE", help="Replace term")
     parser.add_argument("--allow-hidden", action="store_true",
                         help="allow hidden files. hidden files are ignored by default.")
     parser.add_argument("--force", action="store_true",
                         help="Will overwrite any existing files. This is DANGEROUS.")
-    parser.add_argument("-d", "--dry-run", action="store_true",
+    parser.add_argument("--dry-run", action="store_true",
                         help="Dry run (do not rename any files)")
     parser.add_argument("-q", "--quiet", action="store_true",
                         help="Produce no output.")
